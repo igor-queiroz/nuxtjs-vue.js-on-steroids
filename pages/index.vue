@@ -14,25 +14,11 @@ export default {
   components: {
     PostList,
   },
-  data() {
-    return {
-      loadedPosts: [
-        {
-          id: '1',
-          title: 'First Post',
-          previewText: 'This is our first post',
-          thumbnail:
-            'https://img.freepik.com/free-photo/businessman-using-tech-devices-icons-thin-line-interface_117023-904.jpg?size=626&ext=jpg',
-        },
-        {
-          id: '2',
-          title: 'Second Post',
-          previewText: 'This is our second post',
-          thumbnail:
-            'https://img.freepik.com/free-photo/businessman-using-tech-devices-icons-thin-line-interface_117023-904.jpg?size=626&ext=jpg',
-        },
-      ],
-    }
+
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    },
   },
 }
 </script>
