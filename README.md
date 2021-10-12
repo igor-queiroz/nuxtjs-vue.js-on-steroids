@@ -1,4 +1,4 @@
-# y
+# NuxtJS APP
 
 ## Build Setup
 
